@@ -52,21 +52,21 @@ html(lang="en")
       main.main 
 
          .benefits 
-            article.benefits__card
-               h2.benefists__title Access your files, anywhere
-               p.benefis__text The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.
+            article.benefits__card.benefits__card--access
+               h2.benefits__title Access your files, anywhere
+               p.benefits__text The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.
             
-            article.benefits__card
-               h2.benefists__title Security you can trust
-               p.benefis__text 2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.
+            article.benefits__card.benefits__card--security
+               h2.benefits__title Security you can trust
+               p.benefits__text 2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.
             
-            article.benefits__card
-               h2.benefists__title Real-time collaboration
-               p.benefis__text Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.
+            article.benefits__card.benefits__card--collaboration
+               h2.benefits__title Real-time collaboration
+               p.benefits__text Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.
             
-            article.benefits__card
-               h2.benefists__title Store any type of file
-               p.benefis__text Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.
+            article.benefits__card.benefits__card--files
+               h2.benefits__title Store any type of file
+               p.benefits__text Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.
 
          article.productivity
             .productivity__illustration 
@@ -77,42 +77,44 @@ html(lang="en")
                a.productivity__link(href="#") See how Fylo works
 
          .testimonials
+            article.testimonials__card 
+               blockquote.testimonials__quote Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
+               footer.testimonials__footer
+                  img.testimonials__image(src="assets/img/profile-1.jpg", alt="Satish Patel profile image")
+                  .testimonials__data 
+                     h2.testimonials__name Satish Patel
+                     p.testimonials__job Founder & CEO, Huddle
 
-            article.testimonial__card 
-               blockquote.testimonial__quote Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
-               footer.testimonial__footer
-                  img.testimonial__image(src="assets/img/profile-1.jpg", alt="profile image")
-                  .testimonial__data 
-                     h2.testimonial__name Satish Patel
-                     p.testimonial__job Founder & CEO, Huddle
+            article.testimonials__card 
+               blockquote.testimonials__quote   Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
+               footer.testimonials__footer
+                  img.testimonials__image(src="assets/img/profile-2.jpg", alt="Bruce McKenzie profile image")
+                  .testimonials__data 
+                     h2.testimonials__name Bruce McKenzie
+                     p.testimonials__job Founder & CEO, Huddle
 
-            article.testimonial__card 
-               blockquote.testimonial__quote   Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
-               footer.testimonial__footer
-                  img.testimonial__image(src="assets/img/profile-2.jpg", alt="profile image")
-                  .testimonial__data 
-                     h2.testimonial__name Bruce McKenzie
-                     p.testimonial__job Founder & CEO, Huddle
-
-            article.testimonial__card 
-               blockquote.testimonial__quote Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
-               footer.testimonial__footer
-                  img.testimonial__image(src="assets/img/profile-3.jpg", alt="profile image")
-                  .testimonial__data 
-                     h2.testimonial__name Iva Boyd
-                     p.testimonial__job Founder & CEO, Huddle
+            article.testimonials__card 
+               blockquote.testimonials__quote Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
+               footer.testimonials__footer
+                  img.testimonials__image(src="assets/img/profile-3.jpg", alt="Iva Boyd profile image")
+                  .testimonials__data 
+                     h2.testimonials__name Iva Boyd
+                     p.testimonials__job Founder & CEO, Huddle
 
       footer.footer
          form.form(action="#")
             h2.form__title Get early access today
             p.form__text It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.
             .form__inputs 
-               input.form__email#email(
-                     type="email", 
-                     name="email", 
-                     aria-label="Your email", 
-                     placeholder="email@example.com"
-                  )
+               .form__email
+                  input.form__input#email(
+                        type="email", 
+                        name="email", 
+                        aria-label="Your email", 
+                        placeholder="email@example.com",
+                        required
+                     )
+                  p.form__error Please enter a valid email adress
                button.form__submit(type="submit") Get Started For Free
 
          img.footer__logo(src="assets/img/logo.svg", alt="Fylo logo")
@@ -124,27 +126,30 @@ html(lang="en")
                li.contact__item 
                   a.contact__link.contact__link--telephone(href="tel:+1-543-123-4567") +1-543-123-4567
                li.contact__item
-                  a.contact__link.contact__link--email(href="mailto:example@fylo.com") +1-543-123-4567
+                  a.contact__link.contact__link--email(href="mailto:example@fylo.com") example@fylo.com
 
-            ul.footer-list
-               li.footer-list__item: a.footer-list__link About Us
-               li.footer-list__item: a.footer-list__link Jobs
-               li.footer-list__item: a.footer-list__link Press
-               li.footer-list__item: a.footer-list__link Blog
+            .footer__lists
+               ul.footer-list
+                  li.footer-list__item: a.footer-list__link About Us
+                  li.footer-list__item: a.footer-list__link Jobs
+                  li.footer-list__item: a.footer-list__link Press
+                  li.footer-list__item: a.footer-list__link Blog
 
-            ul.footer-list
-               li.footer-list__item: a.footer-list__link Contact Us
-               li.footer-list__item: a.footer-list__link Terms
-               li.footer-list__item: a.footer-list__link Privacy
+               ul.footer-list
+                  li.footer-list__item: a.footer-list__link Contact Us
+                  li.footer-list__item: a.footer-list__link Terms
+                  li.footer-list__item: a.footer-list__link Privacy
             
             ul.social
                li.social__item 
                   a.social__link
                      i.fab.fa-facebook-f.social__icon
                      span.social__screen-reader-only Go to Fylo's facebook
+               li.social__item 
                   a.social__link
                      i.fab.fa-twitter.social__icon
-                     span.social__screen-reader-only Go to Fylo's facebook
+                     span.social__screen-reader-only Go to Fylo's twitter
+               li.social__item 
                   a.social__link
                      i.fab.fa-instagram.social__icon
-                     span.social__screen-reader-only Go to Fylo's facebook
+                     span.social__screen-reader-only Go to Fylo's instagram

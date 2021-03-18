@@ -1,0 +1,67 @@
+@use "abstracts/vars/colors" as c;
+
+.testimonials{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   gap: 2rem;
+   padding: 8rem;
+   
+   @media screen and (min-width: 768px){
+      gap: 3rem;
+   }
+
+   &__card{
+      background-color: c.$dark-blue-testimonials;
+      min-width: 300px;
+      width: 400px;
+      border-radius: 0.5rem;
+      padding: 1.6rem;
+
+      @media screen and (min-width: 768px){
+         padding: 3rem 2rem 2rem;
+      }
+
+      &:first-child{
+         position: relative;
+
+         &::before{
+            content: url(../assets/img/bg-quotes.png);
+            position: absolute;
+            top: -40px;
+            left: 10px;
+            z-index: -1;
+
+            @media screen and (min-width: 768px){
+               left: -10px;
+            }
+         }
+      }
+   }
+
+   &__quote{
+      color: darken(c.$white, 15%);
+      line-height: 2;
+      font-size: 0.8rem;
+      margin: 0;
+   }
+
+   &__footer{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+   }
+
+   &__image{
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+   }
+
+   &__name,
+   &__job{
+      font-size: 0.8rem;
+   }
+}

@@ -1,0 +1,54 @@
+@use "abstracts/vars/colors" as c;
+
+.benefits{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 8rem;
+   text-align: center;
+   padding: 1.5rem;
+   margin-top: 130px;
+   
+   @media screen and (min-width: 900px){
+      justify-content: space-between;
+      max-width: 900px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 0;
+      position: relative;
+      top: -50px;
+   }
+   
+   &__card{
+      width: 350px;
+      padding-top: 90px;
+      background-position: top;
+      background-repeat: no-repeat;
+
+      &--access{
+         background-image: url(../assets/img/icon-access-anywhere.svg);
+      }
+      
+      &--security{
+         background-image: url(../assets/img/icon-security.svg);
+      }
+
+      &--collaboration{
+         background-image: url(../assets/img/icon-collaboration.svg);
+      }
+
+      &--files{
+         background-image: url(../assets/img/icon-any-file.svg);
+      }
+   }
+
+   &__title{
+      font-family: Raleway, sans-serif;
+   }
+
+   &__text{
+      color: darken(c.$white, 20%);
+      line-height: 1.5;
+      font-size: 1.1rem;
+   }
+}

@@ -46,21 +46,21 @@
     </header>
     <main class="main"> 
       <div class="benefits"> 
-        <article class="benefits__card">
-          <h2 class="benefists__title">Access your files, anywhere</h2>
-          <p class="benefis__text">The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
+        <article class="benefits__card benefits__card--access">
+          <h2 class="benefits__title">Access your files, anywhere</h2>
+          <p class="benefits__text">The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
         </article>
-        <article class="benefits__card">
-          <h2 class="benefists__title">Security you can trust</h2>
-          <p class="benefis__text">2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
+        <article class="benefits__card benefits__card--security">
+          <h2 class="benefits__title">Security you can trust</h2>
+          <p class="benefits__text">2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
         </article>
-        <article class="benefits__card">
-          <h2 class="benefists__title">Real-time collaboration</h2>
-          <p class="benefis__text">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+        <article class="benefits__card benefits__card--collaboration">
+          <h2 class="benefits__title">Real-time collaboration</h2>
+          <p class="benefits__text">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
         </article>
-        <article class="benefits__card">
-          <h2 class="benefists__title">Store any type of file</h2>
-          <p class="benefis__text">Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.</p>
+        <article class="benefits__card benefits__card--files">
+          <h2 class="benefits__title">Store any type of file</h2>
+          <p class="benefits__text">Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.</p>
         </article>
       </div>
       <article class="productivity">
@@ -72,30 +72,30 @@
         </div>
       </article>
       <div class="testimonials">
-        <article class="testimonial__card"> 
-          <blockquote class="testimonial__quote">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</blockquote>
-          <footer class="testimonial__footer"><img class="testimonial__image" src="assets/img/profile-1.jpg" alt="profile image">
-            <div class="testimonial__data"> 
-              <h2 class="testimonial__name">Satish Patel</h2>
-              <p class="testimonial__job">Founder & CEO, Huddle</p>
+        <article class="testimonials__card"> 
+          <blockquote class="testimonials__quote">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</blockquote>
+          <footer class="testimonials__footer"><img class="testimonials__image" src="assets/img/profile-1.jpg" alt="Satish Patel profile image">
+            <div class="testimonials__data"> 
+              <h2 class="testimonials__name">Satish Patel</h2>
+              <p class="testimonials__job">Founder & CEO, Huddle</p>
             </div>
           </footer>
         </article>
-        <article class="testimonial__card"> 
-          <blockquote class="testimonial__quote">  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</blockquote>
-          <footer class="testimonial__footer"><img class="testimonial__image" src="assets/img/profile-2.jpg" alt="profile image">
-            <div class="testimonial__data"> 
-              <h2 class="testimonial__name">Bruce McKenzie</h2>
-              <p class="testimonial__job">Founder & CEO, Huddle</p>
+        <article class="testimonials__card"> 
+          <blockquote class="testimonials__quote">  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</blockquote>
+          <footer class="testimonials__footer"><img class="testimonials__image" src="assets/img/profile-2.jpg" alt="Bruce McKenzie profile image">
+            <div class="testimonials__data"> 
+              <h2 class="testimonials__name">Bruce McKenzie</h2>
+              <p class="testimonials__job">Founder & CEO, Huddle</p>
             </div>
           </footer>
         </article>
-        <article class="testimonial__card"> 
-          <blockquote class="testimonial__quote">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</blockquote>
-          <footer class="testimonial__footer"><img class="testimonial__image" src="assets/img/profile-3.jpg" alt="profile image">
-            <div class="testimonial__data"> 
-              <h2 class="testimonial__name">Iva Boyd</h2>
-              <p class="testimonial__job">Founder & CEO, Huddle</p>
+        <article class="testimonials__card"> 
+          <blockquote class="testimonials__quote">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</blockquote>
+          <footer class="testimonials__footer"><img class="testimonials__image" src="assets/img/profile-3.jpg" alt="Iva Boyd profile image">
+            <div class="testimonials__data"> 
+              <h2 class="testimonials__name">Iva Boyd</h2>
+              <p class="testimonials__job">Founder & CEO, Huddle</p>
             </div>
           </footer>
         </article>
@@ -106,7 +106,10 @@
         <h2 class="form__title">Get early access today</h2>
         <p class="form__text">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
         <div class="form__inputs"> 
-          <input class="form__email" id="email" type="email" name="email" aria-label="Your email" placeholder="email@example.com">
+          <div class="form__email">
+            <input class="form__input" id="email" type="email" name="email" aria-label="Your email" placeholder="email@example.com" required>
+            <p class="form__error">Please enter a valid email adress</p>
+          </div>
           <button class="form__submit" type="submit">Get Started For Free</button>
         </div>
       </form><img class="footer__logo" src="assets/img/logo.svg" alt="Fylo logo">
@@ -114,21 +117,25 @@
         <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
         <ul class="contact"> 
           <li class="contact__item"> <a class="contact__link contact__link--telephone" href="tel:+1-543-123-4567">+1-543-123-4567</a></li>
-          <li class="contact__item"><a class="contact__link contact__link--email" href="mailto:example@fylo.com">+1-543-123-4567</a></li>
+          <li class="contact__item"><a class="contact__link contact__link--email" href="mailto:example@fylo.com">example@fylo.com</a></li>
         </ul>
-        <ul class="footer-list">
-          <li class="footer-list__item"><a class="footer-list__link">About Us</a></li>
-          <li class="footer-list__item"><a class="footer-list__link">Jobs</a></li>
-          <li class="footer-list__item"><a class="footer-list__link">Press</a></li>
-          <li class="footer-list__item"><a class="footer-list__link">Blog</a></li>
-        </ul>
-        <ul class="footer-list">
-          <li class="footer-list__item"><a class="footer-list__link">Contact Us</a></li>
-          <li class="footer-list__item"><a class="footer-list__link">Terms</a></li>
-          <li class="footer-list__item"><a class="footer-list__link">Privacy</a></li>
-        </ul>
+        <div class="footer__lists">
+          <ul class="footer-list">
+            <li class="footer-list__item"><a class="footer-list__link">About Us</a></li>
+            <li class="footer-list__item"><a class="footer-list__link">Jobs</a></li>
+            <li class="footer-list__item"><a class="footer-list__link">Press</a></li>
+            <li class="footer-list__item"><a class="footer-list__link">Blog</a></li>
+          </ul>
+          <ul class="footer-list">
+            <li class="footer-list__item"><a class="footer-list__link">Contact Us</a></li>
+            <li class="footer-list__item"><a class="footer-list__link">Terms</a></li>
+            <li class="footer-list__item"><a class="footer-list__link">Privacy</a></li>
+          </ul>
+        </div>
         <ul class="social">
-          <li class="social__item"> <a class="social__link"><i class="fab fa-facebook-f social__icon"></i><span class="social__screen-reader-only">Go to Fylo's facebook</span></a><a class="social__link"><i class="fab fa-twitter social__icon"></i><span class="social__screen-reader-only">Go to Fylo's facebook</span></a><a class="social__link"><i class="fab fa-instagram social__icon"></i><span class="social__screen-reader-only">Go to Fylo's facebook</span></a></li>
+          <li class="social__item"> <a class="social__link"><i class="fab fa-facebook-f social__icon"></i><span class="social__screen-reader-only">Go to Fylo's facebook</span></a></li>
+          <li class="social__item"> <a class="social__link"><i class="fab fa-twitter social__icon"></i><span class="social__screen-reader-only">Go to Fylo's twitter</span></a></li>
+          <li class="social__item"> <a class="social__link"><i class="fab fa-instagram social__icon"></i><span class="social__screen-reader-only">Go to Fylo's instagram</span></a></li>
         </ul>
       </div>
     </footer>

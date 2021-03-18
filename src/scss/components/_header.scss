@@ -1,0 +1,125 @@
+@use "abstracts/vars/colors" as c;
+
+.main-header__illustration,
+.main-header__text,
+.title{
+   width: 90%;
+   max-width: 600px;
+}
+
+.main-header{
+   background-color: c.$dark-blue-intro;
+   text-align: center;
+   font-family: Raleway, sans-serif;
+   
+   &__top{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      max-width: 1350px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media screen and (min-width: 768px){
+         padding-top: 3rem;
+      }
+   }
+
+   &__logo{
+      width: 100px;
+
+      @media screen and (min-width: 768px){
+         width: 150px;
+      }
+   }
+
+   &__body{
+      background-image: url(../assets/img/bg-curvy-mobile.svg);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 170% 65%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1rem;
+
+      @media screen and (min-width: 768px){
+         background-image: url(../assets/img/bg-curvy-desktop.svg);
+         padding-bottom: 200px;
+         background-size: 100%;
+      }
+   }
+
+   
+   
+   &__illustration{
+      content: url(../assets/img/illustration-intro.png);   
+   }
+
+   &__text{
+      color: darken(c.$white, 30%);
+      line-height: 1.5;
+      padding: 1rem;
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.1rem;
+      margin-top: 0;
+
+      @media screen and (min-width: 600px){
+         font-size: 1.3rem;
+         width: 90%;
+      }
+   }
+
+   &__link{
+      text-decoration: none;
+      padding: 1.1rem 6rem;
+      background-image: linear-gradient(to right, c.$cyan, c.$blue);
+      color: inherit;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 2rem;
+
+      @media screen and (min-width: 768px){
+         &:hover{
+            background: c.$cyan;
+         }
+      }
+   }
+}
+
+.title{
+   font-size: 1.8rem;
+   line-height: 1.5;
+
+   @media screen and (min-width: 600px){
+      font-size: 2.5rem;
+   }
+}
+
+.menu{
+   list-style: none;
+   padding-left: 0;
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
+   color: darken(c.$white, 30%);
+
+   @media screen and (min-width: 768px){
+      gap: 2.5rem;
+   }
+
+   &__link{
+      text-decoration: none;
+      color: inherit;
+      
+      @media screen and (min-width: 768px){
+         transition: color 0.2s;
+
+         &:hover{
+            text-decoration: underline;
+            color: c.$white;
+         }
+      }
+   }
+}

@@ -1,0 +1,12 @@
+@use "abstracts/vars/colors" as c;
+
+html{
+   font-size: 14px;
+   font-family: "Open Sans", sans-serif;
+   background-color: c.$dark-blue-main;
+   color: c.$white;
+}
+
+body{
+   min-height: 100vh;
+}

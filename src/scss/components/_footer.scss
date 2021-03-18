@@ -1,0 +1,156 @@
+@use "abstracts/vars/colors" as c;
+
+.footer{
+   background-color: c.$dark-blue-footer;
+   padding: 1.5rem;
+   margin-top: 150px;
+
+   &__logo{
+      margin-left: 1rem;
+   }
+
+   &__text{
+      padding-left: 2.5rem;
+      line-height: 1.5;
+      position: relative;
+      max-width: 500px;
+
+      &::before{
+         content: url(../assets/img/icon-location.svg);
+         position: absolute;
+         top: 5px;
+         left: 0;
+      }
+   }
+
+   @media screen and (min-width: 768px){
+      &__body{
+         display: grid;
+         grid-template-columns: 1fr;
+         justify-content: center;
+      }
+   }
+
+   @media screen and (min-width: 1200px){
+      &__body{
+         
+         grid-template-columns: 350px repeat(3, 1fr);
+         gap: 3rem;
+         max-width: 1200px;
+         margin-left: auto;
+         margin-right: auto;
+      }
+
+      &__lists{
+         display: flex;
+         gap: 3rem;
+      }
+   }
+
+   @media screen and (min-width: 1500px){
+      &__logo{
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         margin-bottom: 2rem;
+      }
+   }
+}
+
+.contact,
+.footer-list,
+.social{
+   list-style: none;
+   padding-left: 0;
+}
+
+.contact{
+   margin-bottom: 3rem;
+
+   &__item{
+      margin-bottom: 1.5rem;
+   }
+
+   &__link{
+      color: inherit;
+      text-decoration: none;
+      padding-left: 2.5rem;
+      position: relative;
+
+      &::before{
+         position: absolute;
+         top: 0;
+         left: 0;
+      }
+
+      &--telephone::before{
+         content: url(../assets/img/icon-phone.svg);
+      }
+      
+      &--email::before{
+         content: url(../assets/img/icon-email.svg);
+      }
+   }
+}
+
+.footer-list{
+   margin-bottom: 4rem;
+   font-size: 1.2rem;
+
+   @media screen and (min-width: 1200px){
+      margin-top: 0;
+   }
+
+   &__item{
+      margin-top: 1rem;
+
+      @media screen and (min-width: 768px){
+         &:hover{
+            font-weight: bold;     
+         }
+      }
+   }
+
+   &__link{
+      cursor: pointer;
+   }
+}
+
+.social{
+   display: flex;
+   justify-content: center;
+   gap: 2rem;
+
+   @media screen and (max-width: 1200px){
+      margin-top: 5rem;
+   }
+
+   &__item{
+      font-size: 1.3rem;
+      border: 1px solid c.$white;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      display: grid;
+      place-items: center;
+
+      @media screen and (min-width: 768px){
+         transition: color 0.5s;
+
+         &:hover{
+            border-color: c.$cyan;
+            color: c.$cyan;
+         }
+      }
+   }
+
+   &__link{
+      text-decoration: none;
+      cursor: pointer;
+   }
+
+   &__screen-reader-only{
+      font-size: 0;
+      color: transparent;
+   }
+}
