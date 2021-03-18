@@ -7,6 +7,17 @@
 
    &__logo{
       margin-left: 1rem;
+
+      @media screen and (min-width: 1300px){
+         margin-left: 10rem;
+      }
+
+      @media screen and (min-width: 1500px){
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         margin-bottom: 2rem;
+      }
    }
 
    &__text{
@@ -44,15 +55,6 @@
       &__lists{
          display: flex;
          gap: 3rem;
-      }
-   }
-
-   @media screen and (min-width: 1500px){
-      &__logo{
-         display: block;
-         margin-left: auto;
-         margin-right: auto;
-         margin-bottom: 2rem;
       }
    }
 }
