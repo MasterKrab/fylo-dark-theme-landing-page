@@ -112,7 +112,9 @@ html(lang="en")
                         name="email", 
                         aria-label="Your email", 
                         placeholder="email@example.com",
-                        required
+                        required,
+                        title= "Type a valid email adress",
+                        pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" 
                      )
                   p.form__error Please enter a valid email adress
                button.form__submit(type="submit") Get Started For Free
